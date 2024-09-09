@@ -1,0 +1,144 @@
+<div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Crear Mascota</h2>
+  
+    <form [formGroup]="mascotaForm" (ngSubmit)="onSubmit()">
+  
+      <!-- Nombre -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="correo">Nombre</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="nombre"
+          formControlName="nombre"
+          type="text"
+          placeholder="Ingrese el nombre de la mascota"
+        />
+      </div>
+  
+      <!-- Especie -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasenaacceso">Especie</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="especie"
+          formControlName="especie"
+          type="text"
+          placeholder="Ingrese la especie animal"
+        />
+      </div>
+  
+      <!-- Raza -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="jurisdiccion">Raza</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="raza"
+          formControlName="raza"
+          type="text"
+          placeholder="Ingrese la raza animal"
+        />
+      </div>
+  
+      <!-- Fecha de nacimiento -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="rangopolicial">Fecha De Nacimiento</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="fecha_nacimiento"
+          formControlName="fecha_nacimiento"
+          type="date"
+          placeholder="Ingrese la fecha de nacimiento (aaaa/mm/dd)"
+        />
+      </div>
+  
+      <!-- Tipo de id del dueño -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="numeroplaca">Tipo De Id (Dueño)</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="tipo_identificacion"
+          formControlName="tipo_identificacion"
+          type="text"
+          placeholder="Ingrese el tipo de identificación del dueño"
+        />
+      </div>
+  
+      <!-- ID del dueño -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="idsecretaria">Id (Dueño)</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="id_propietario"
+          formControlName="id_propietario"
+          type="text"
+          placeholder="Ingrese el ID del dueño"
+        />
+      </div>
+
+      <!-- Nombre del dueño -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="idsecretaria">Nombre (Dueño)</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="nombre_propietario"
+          formControlName="nombre_propietario"
+          type="text"
+          placeholder="Ingrese el nombre del dueño"
+        />
+      </div>
+
+      <!-- Ciudad -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="idsecretaria">Ciudad</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="ciudad"
+          formControlName="ciudad"
+          type="text"
+          placeholder="Ingrese la ciudad de procedencia"
+        />
+      </div>
+
+      <!-- Direccion -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="idsecretaria">Dirección</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="direccion"
+          formControlName="direccion"
+          type="text"
+          placeholder="Ingrese la dirección"
+        />
+      </div>
+        
+      <!-- Telefono -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="idsecretaria">Teléfono</label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="telefono"
+          formControlName="telefono"
+          type="text"
+          placeholder="Ingrese el teléfono del dueño"
+        />
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="flex items-center m-2">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Guardar
+        </button>
+        <button
+          (click)="Cancelar()"
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2"
+          type="button"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+  

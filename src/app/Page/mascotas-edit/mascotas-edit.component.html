@@ -1,0 +1,158 @@
+<div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Actualizar Persona Natural</h2>
+  
+    <form [formGroup]="mascotaForm" >
+      <!-- Campo Cédula -->
+      <div class="mb-4" *ngIf="!isEditing">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="id">Id</label>
+        <input
+          formControlName="id"
+          id="id"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline cursor-not-allowed"
+          type="text"
+          placeholder="Ingrese el id"
+          readonly
+  
+        >
+      </div>
+  
+       <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
+        <input
+          formControlName="nombre"
+          id="nombre"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese el nombre"
+        >
+        <div *ngIf="mascotaForm.get('nombre')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="especie">Especie</label>
+        <input
+          formControlName="especie"
+          id="especie"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese la especie"
+        >
+        <div *ngIf="mascotaForm.get('especie')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha_nacimiento">Fecha_Nacimiento</label>
+        <input
+          formControlName="fecha_nacimiento"
+          id="fecha_nacimiento"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese la fecha de nacimiento"
+        >
+        <div *ngIf="mascotaForm.get('fecha_nacimiento')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="especie">Tipo De Identificacion</label>
+        <input
+          formControlName="tipo_identificacion"
+          id="tipo_identificacion"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese el Tipo De Identificacion"
+        >
+        <div *ngIf="mascotaForm.get('tipo_identificacion')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="id_propietario">Id Propíetario</label>
+        <input
+          formControlName="id_propietario"
+          id="id_propietario"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese El Id Del Propietario"
+        >
+        <div *ngIf="mascotaForm.get('id_propietario')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre_propietario">Nombre Del Propietario</label>
+        <input
+          formControlName="nombre_propietario"
+          id="nombre_propietario"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese Nombre Del Propietario"
+        >
+        <div *ngIf="mascotaForm.get('nombre_propietario')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="ciudad">Ciudad</label>
+        <input
+          formControlName="ciudad"
+          id="ciudad"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese la Ciudad"
+        >
+        <div *ngIf="mascotaForm.get('ciudad')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">Direccion</label>
+        <input
+          formControlName="direccion"
+          id="direccion"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese la Direccion"
+        >
+        <div *ngIf="mascotaForm.get('direccion')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">Teléfono</label>
+        <input
+          formControlName="telefono"
+          id="telefono"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Ingrese El Telefono"
+        >
+        <div *ngIf="mascotaForm.get('telefono')" class="text-red-500 text-xs mt-1">
+  
+        </div>
+      </div>
+      
+  
+      <div class="flex items-center m-2">
+        <button
+        (click)="onSubmit()"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Guardar
+        </button>
+        <button
+          type="button"
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2"
+          (click)="onCancel()"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+  
