@@ -45,7 +45,6 @@ export default class MascotasListComponent implements OnInit {
   }
 
   DeleteMascota(id: any) {
-    console.log('este es el id que llega', id);
 
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
