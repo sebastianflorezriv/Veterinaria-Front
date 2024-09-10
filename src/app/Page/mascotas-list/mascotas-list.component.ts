@@ -110,14 +110,10 @@ export default class MascotasListComponent implements OnInit {
   }
 
   exportToExcel(): void {
-    // Crea una nueva hoja de trabajo y agrega los datos
+    
     const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.mascotas);
-
-    // Crea un libro de trabajo y agrega la hoja de trabajo
     const wb: XLSX.WorkBook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Mascotas');
-
-    // Genera un archivo de Excel y lo descarga
     XLSX.writeFile(wb, 'mascotas.xlsx');
   }
 }
